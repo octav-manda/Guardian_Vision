@@ -213,6 +213,3 @@ Accelerometru ceas (50Hz)
 
 ---
 
-## Licență
-
-Proiect open-source realizat în cadrul **Google Hackathon 2026**.
