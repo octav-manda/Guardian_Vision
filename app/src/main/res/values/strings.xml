@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Guardian Vision</string>
+    <string name="accessibility_service_label">Guardian Vision Trigger</string>
+    <string name="accessibility_service_description">Permite pornirea/oprirea sistemului de asistență vizuală cu triple-press pe butonul de volum jos</string>
+    <string name="start_system">Pornește sistemul</string>
+    <string name="stop_system">Oprește sistemul</string>
+    <string name="system_active">SISTEM ACTIV</string>
+    <string name="system_inactive">SISTEM OPRIT</string>
+    <string name="describe_scene">Descrie scena</string>
+    <string name="emergency_contacts">Contacte urgență</string>
+    <string name="permission_required">Permisiuni necesare: Cameră, SMS, Locație</string>
+</resources>

@@ -1,0 +1,94 @@
+{
+    "logs": [
+        {
+            "outputFile": "ro.pub.cs.system.eim.aplicatie_hack.wear-mergeDebugResources-42:/values-zh-rTW/values-zh-rTW.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\gabri\\.gradle\\caches\\8.13\\transforms\\8b2ff2510fcd8afae6115fdae35dac1b\\transformed\\play-services-base-18.5.0\\res\\values-zh-rTW\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "197,294,418,529,627,730,842,938,1029,1135,1232,1357,1468,1566,1670,1722,1775",
+                        "endColumns": "96,123,110,97,102,111,95,90,105,96,124,110,97,103,51,52,69",
+                        "endOffsets": "293,417,528,626,729,841,937,1028,1134,1231,1356,1467,1565,1669,1721,1774,1844"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "991,1092,1220,1335,1437,1544,1660,1760,1958,2068,2169,2298,2413,2515,2623,2679,2736",
+                        "endColumns": "100,127,114,101,106,115,99,94,109,100,128,114,101,107,55,56,73",
+                        "endOffsets": "1087,1215,1330,1432,1539,1655,1755,1850,2063,2164,2293,2408,2510,2618,2674,2731,2805"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gabri\\.gradle\\caches\\8.13\\transforms\\dae8e7b1f6ac39d8038f59ed7f1cd660\\transformed\\foundation-release\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,138",
+                        "endColumns": "82,78",
+                        "endOffsets": "133,212"
+                    },
+                    "to": {
+                        "startLines": "48,49",
+                        "startColumns": "4,4",
+                        "startOffsets": "4242,4325",
+                        "endColumns": "82,78",
+                        "endOffsets": "4320,4399"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gabri\\.gradle\\caches\\8.13\\transforms\\c76910c4431aebbc5ab44ac02cf2e113\\transformed\\core-1.17.0\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,246,340,434,527,620,716",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "142,241,335,429,522,615,711,812"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,44",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "177,269,368,462,556,649,742,3883",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "264,363,457,551,644,737,833,3979"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gabri\\.gradle\\caches\\8.13\\transforms\\de6912e424a42562a1033a115aae6e4a\\transformed\\play-services-basement-18.4.0\\res\\values-zh-rTW\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "199",
+                        "endColumns": "98",
+                        "endOffsets": "297"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1855",
+                        "endColumns": "102",
+                        "endOffsets": "1953"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gabri\\.gradle\\caches\\8.13\\transforms\\c783a13d8245e95de7f31903a76b4554\\transformed\\ui-release\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,177,254,330,417,508,586,660,737,815,890,963,1038,1106,1187,1260,1332,1403,1477,1545",
+                        "endColumns": "71,76,75,86,90,77,73,76,77,74,72,74,67,80,72,71,70,73,67,115",
+                        "endOffsets": "172,249,325,412,503,581,655,732,810,885,958,1033,1101,1182,1255,1327,1398,1472,1540,1656"
+                    },
+                    "to": {
+                        "startLines": "2,10,11,30,31,32,33,34,35,36,37,38,39,40,41,42,43,45,46,47",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,838,915,2810,2897,2988,3066,3140,3217,3295,3370,3443,3518,3586,3667,3740,3812,3984,4058,4126",
+                        "endColumns": "71,76,75,86,90,77,73,76,77,74,72,74,67,80,72,71,70,73,67,115",
+                        "endOffsets": "172,910,986,2892,2983,3061,3135,3212,3290,3365,3438,3513,3581,3662,3735,3807,3878,4053,4121,4237"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Camera și microfon -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <!-- Torch / lanternă pentru modul noapte (CameraControl.enableTorch) -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <!-- Servicii foreground -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+
+    <!-- Rețea pentru Gemini API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- SMS de urgență -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <!-- GPS pentru locație în mesajul de urgență -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Vibrație (notificări locale) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Wake lock: ecranul rămâne activ în alertă cădere -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Wearable Data Layer -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Aplicatie_hack">
+
+        <!-- ════════════════════ ACTIVITIES ════════════════════ -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Aplicatie_hack">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ════════════════════ SERVICES ════════════════════ -->
+
+        <!-- Serviciu principal vizual: camera + ML Kit (foreground cu camera) -->
+        <service
+            android:name=".service.VisionForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="camera" />
+
+        <!-- Serviciu de urgență: GPS + SMS după cădere confirmată -->
+        <service
+            android:name=".service.EmergencyResponseService"
+            android:exported="false" />
+
+        <!-- Listener Data/Message Layer: căderi de la ceas + comenzi remote -->
+        <service
+            android:name=".service.PhoneDataLayerService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <!-- Fall events persistente de la FallDetectionService -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/emergency"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- Triple-press buton ceas → lansare aplicație telefon -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/remote"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- Double-tap ceas (tracking activ) → descriere scenă -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/command"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+
+        <!-- ════════════════════ ACCESSIBILITY ════════════════════ -->
+
+        <!-- Triple-press volum jos → pornire/oprire sistem -->
+        <service
+            android:name=".accessibility.GuardianAccessibilityService"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+    </application>
+
+</manifest>

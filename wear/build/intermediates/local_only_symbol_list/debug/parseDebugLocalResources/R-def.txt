@@ -1,0 +1,7 @@
+R_DEF: Internal format may change without notice
+local
+string app_name
+string fall_alert_title
+string fall_detection_active
+string im_ok
+string sending_emergency

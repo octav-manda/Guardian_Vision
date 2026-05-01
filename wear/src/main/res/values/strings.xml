@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Guardian</string>
+    <string name="fall_alert_title">Alertă cădere!</string>
+    <string name="im_ok">Sunt bine</string>
+    <string name="sending_emergency">Trimitere urgență…</string>
+    <string name="fall_detection_active">Protecție activă</string>
+</resources>

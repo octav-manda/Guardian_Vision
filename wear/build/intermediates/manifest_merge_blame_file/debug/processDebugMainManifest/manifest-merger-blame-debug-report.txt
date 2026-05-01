@@ -1,0 +1,282 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ro.pub.cs.system.eim.aplicatie_hack"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="30"
+9        android:targetSdkVersion="36" />
+10
+11    <!-- Hardware watch feature — identifică APK-ul ca aplicație Wear OS -->
+12    <uses-feature android:name="android.hardware.type.watch" />
+12-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:6:5-64
+12-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:6:19-61
+13
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:8:5-66
+14-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:8:22-63
+15    <uses-permission android:name="android.permission.BODY_SENSORS" />
+15-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:9:5-71
+15-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:9:22-68
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:10:5-77
+16-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:10:22-74
+17    <!-- API 34+ necesită tipul de foreground service declarat explicit -->
+18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+18-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:12:5-84
+18-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:12:22-81
+19    <!-- Cerută de FOREGROUND_SERVICE_TYPE_HEALTH pe API 34+ pentru accesul la senzori -->
+20    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+20-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:14:5-85
+20-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:14:22-82
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:15:5-68
+21-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:15:22-65
+22
+23    <!-- Asistent vocal -->
+24    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+24-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:18:5-71
+24-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:18:22-68
+25    <uses-permission android:name="android.permission.INTERNET" />
+25-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:19:5-67
+25-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:19:22-64
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:20:5-79
+26-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:20:22-76
+27
+28    <!-- Locație pentru Directions API -->
+29    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+29-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:23:5-79
+29-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:23:22-76
+30    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+30-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:24:5-81
+30-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:24:22-78
+31
+32    <permission
+32-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:22:5-24:47
+33        android:name="ro.pub.cs.system.eim.aplicatie_hack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+33-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:23:9-81
+34        android:protectionLevel="signature" />
+34-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:24:9-44
+35
+36    <uses-permission android:name="ro.pub.cs.system.eim.aplicatie_hack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+36-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:26:5-97
+36-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:26:22-94
+37
+38    <application
+38-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:26:5-92:19
+39        android:allowBackup="true"
+39-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:27:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.17.0] C:\Users\gabri\.gradle\caches\8.13\transforms\c76910c4431aebbc5ab44ac02cf2e113\transformed\core-1.17.0\AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:label="@string/app_name"
+43-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:28:9-41
+44        android:supportsRtl="true"
+44-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:29:9-35
+45        android:testOnly="true"
+46        android:theme="@android:style/Theme.DeviceDefault" >
+46-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:30:9-59
+47        <uses-library
+47-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:32:9-34:39
+48            android:name="com.google.android.wearable"
+48-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:33:13-55
+49            android:required="true" />
+49-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:34:13-36
+50
+51        <!-- Activity principală ceas -->
+52        <activity
+52-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:37:9-45:20
+53            android:name="ro.pub.cs.system.eim.aplicatie_hack.wear.WatchMainActivity"
+53-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:38:13-46
+54            android:exported="true"
+54-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:39:13-36
+55            android:taskAffinity="" >
+55-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:40:13-36
+56            <intent-filter>
+56-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:41:13-44:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:42:17-69
+57-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:42:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:43:17-77
+59-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:43:27-74
+60            </intent-filter>
+61        </activity>
+62
+63        <!-- Activity alertă cădere: apare pe ecranul de blocare, aprinde ecranul -->
+64        <activity
+64-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:48:9-53:43
+65            android:name="ro.pub.cs.system.eim.aplicatie_hack.wear.FallAlertActivity"
+65-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:49:13-46
+66            android:exported="false"
+66-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:50:13-37
+67            android:showOnLockScreen="true"
+67-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:51:13-44
+68            android:taskAffinity=""
+68-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:52:13-36
+69            android:turnScreenOn="true" />
+69-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:53:13-40
+70
+71        <!-- Serviciu detecție cădere: rulează continuu în background -->
+72        <service
+72-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:56:9-59:54
+73            android:name="ro.pub.cs.system.eim.aplicatie_hack.wear.service.FallDetectionService"
+73-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:57:13-57
+74            android:exported="false"
+74-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:58:13-37
+75            android:foregroundServiceType="health" />
+75-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:59:13-51
+76
+77        <!-- Listener mesaje haptic + stare tracking de la telefon -->
+78        <service
+78-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:62:9-90:19
+79            android:name="ro.pub.cs.system.eim.aplicatie_hack.wear.service.WatchDataLayerService"
+79-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:63:13-58
+80            android:exported="true" >
+80-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:64:13-36
+81
+82            <!-- Haptic fire-and-forget de la telefon -->
+83            <intent-filter>
+83-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:67:13-73:29
+84                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+84-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:68:17-91
+84-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:68:25-88
+85
+86                <data
+86-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:69:17-72:45
+87                    android:host="*"
+87-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:70:21-37
+88                    android:pathPrefix="/haptic"
+88-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:71:21-49
+89                    android:scheme="wear" />
+89-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:72:21-42
+90            </intent-filter>
+91            <!-- Stare tracking (pornit/oprit) de la VisionForegroundService -->
+92            <intent-filter>
+92-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:75:13-81:29
+93                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+93-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:76:17-87
+93-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:76:25-84
+94
+95                <data
+95-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:69:17-72:45
+96                    android:host="*"
+96-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:70:21-37
+97                    android:pathPrefix="/tracking"
+97-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:71:21-49
+98                    android:scheme="wear" />
+98-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:72:21-42
+99            </intent-filter>
+100            <!-- Descriere scenă TTS: textul se redă pe difuzorul ceasului -->
+101            <intent-filter>
+101-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:83:13-89:29
+102                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+102-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:68:17-91
+102-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:68:25-88
+103
+104                <data
+104-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:69:17-72:45
+105                    android:host="*"
+105-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:70:21-37
+106                    android:pathPrefix="/tts"
+106-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:71:21-49
+107                    android:scheme="wear" />
+107-->D:\Faculatate\anul_4_sem_1\Aplicatie_hack\wear\src\main\AndroidManifest.xml:72:21-42
+108            </intent-filter>
+109        </service>
+110
+111        <activity
+111-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gabri\.gradle\caches\8.13\transforms\8b2ff2510fcd8afae6115fdae35dac1b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+112            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+112-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gabri\.gradle\caches\8.13\transforms\8b2ff2510fcd8afae6115fdae35dac1b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+113            android:exported="false"
+113-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gabri\.gradle\caches\8.13\transforms\8b2ff2510fcd8afae6115fdae35dac1b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+114-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\gabri\.gradle\caches\8.13\transforms\8b2ff2510fcd8afae6115fdae35dac1b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+115
+116        <uses-library
+116-->[androidx.wear.compose:compose-foundation:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\641eb8f50b488ac1e1411b1c5e799401\transformed\compose-foundation-1.4.0\AndroidManifest.xml:23:9-25:40
+117            android:name="wear-sdk"
+117-->[androidx.wear.compose:compose-foundation:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\641eb8f50b488ac1e1411b1c5e799401\transformed\compose-foundation-1.4.0\AndroidManifest.xml:24:13-36
+118            android:required="false" />
+118-->[androidx.wear.compose:compose-foundation:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\641eb8f50b488ac1e1411b1c5e799401\transformed\compose-foundation-1.4.0\AndroidManifest.xml:25:13-37
+119
+120        <provider
+120-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+122            android:authorities="ro.pub.cs.system.eim.aplicatie_hack.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\31fe780cdd1d1919736ff1f122cb2ecd\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\gabri\.gradle\caches\8.13\transforms\629eb86f04619adf9ec9d98efcd51a7c\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\gabri\.gradle\caches\8.13\transforms\629eb86f04619adf9ec9d98efcd51a7c\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:30:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\gabri\.gradle\caches\8.13\transforms\629eb86f04619adf9ec9d98efcd51a7c\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+131-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+132                android:value="androidx.startup" />
+132-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+133        </provider>
+134
+135        <meta-data
+135-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\de6912e424a42562a1033a115aae6e4a\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+136            android:name="com.google.android.gms.version"
+136-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\de6912e424a42562a1033a115aae6e4a\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+137            android:value="@integer/google_play_services_version" />
+137-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\de6912e424a42562a1033a115aae6e4a\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+138
+139        <receiver
+139-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+140            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+140-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+141            android:directBootAware="false"
+141-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+142            android:enabled="true"
+142-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+143            android:exported="true"
+143-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+144            android:permission="android.permission.DUMP" >
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+145            <intent-filter>
+145-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+146                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+146-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+146-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+147            </intent-filter>
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+149                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+152                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+155                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\gabri\.gradle\caches\8.13\transforms\35ad7b546a65e82779e55fae9fac70f7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+156            </intent-filter>
+157        </receiver>
+158    </application>
+159
+160</manifest>

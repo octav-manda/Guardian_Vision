@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Hardware watch feature — identifică APK-ul ca aplicație Wear OS -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- API 34+ necesită tipul de foreground service declarat explicit -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+    <!-- Cerută de FOREGROUND_SERVICE_TYPE_HEALTH pe API 34+ pentru accesul la senzori -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Asistent vocal -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Locație pentru Directions API -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+
+        <!-- Activity principală ceas -->
+        <activity
+            android:name=".WatchMainActivity"
+            android:exported="true"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity alertă cădere: apare pe ecranul de blocare, aprinde ecranul -->
+        <activity
+            android:name=".FallAlertActivity"
+            android:exported="false"
+            android:showOnLockScreen="true"
+            android:taskAffinity=""
+            android:turnScreenOn="true" />
+
+        <!-- Serviciu detecție cădere: rulează continuu în background -->
+        <service
+            android:name=".service.FallDetectionService"
+            android:exported="false"
+            android:foregroundServiceType="health" />
+
+        <!-- Listener mesaje haptic + stare tracking de la telefon -->
+        <service
+            android:name=".service.WatchDataLayerService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <!-- Haptic fire-and-forget de la telefon -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/haptic"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- Stare tracking (pornit/oprit) de la VisionForegroundService -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/tracking"
+                    android:scheme="wear" />
+            </intent-filter>
+            <!-- Descriere scenă TTS: textul se redă pe difuzorul ceasului -->
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/tts"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
